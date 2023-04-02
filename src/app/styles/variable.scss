@@ -1,0 +1,15 @@
+$blue: rgb(70, 122, 253);
+$black : #111;
+$white : #fff;
+$gray : #4b4b4b;
+$dark: #252525;
+$light: #d3d3d3;
+
+:export {
+    blue: $blue;
+    black: $black;
+    white: $white;
+    gray: $gray;
+    dark: $dark;
+    light: $light;
+}

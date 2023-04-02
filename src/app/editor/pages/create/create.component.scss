@@ -1,0 +1,114 @@
+// import the file of global scss
+@import '../../../styles/global.scss';
+.container{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto;
+
+    .section_result{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+        h1{
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: $blue;
+            text-align: center;
+        }
+        .title{
+            font-size: 2rem;
+            font-weight: 800;
+            color: $dark;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        .description{
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: $gray;
+            line-height: 30px;
+        }
+    }
+
+    .form{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        form{
+            width: inherit;
+        }
+        .form_group {
+            width: 100%;
+            margin-bottom: 1rem;
+            label{
+                font-size: 1rem;
+                font-weight: 600;
+                color: $black;
+            }
+            input{
+                margin: 10px 0;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $light;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: 400;
+                color: $dark;
+                outline: none;
+            }
+            textarea{
+                margin: 10px 0;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $light;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: 400;
+                color: $dark;
+                outline: none;
+            }
+        }
+        .btn_form{
+            @include btn_full($blue, $white, true, "large");
+        }
+        .btn_show{
+            margin: 0 10px;
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: $blue;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 10px;
+}
+.options{
+    font-size: 1rem;
+    margin-left: 10px;
+    color: $blue;
+}
+::ng-deep .span{
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: $dark;
+    margin-bottom: 50px 0 !important;
+}
+button{
+    @include btn_basic($blue, $white, false, "small");
+}

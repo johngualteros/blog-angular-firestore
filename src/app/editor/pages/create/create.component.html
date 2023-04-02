@@ -1,0 +1,59 @@
+<div class="container">
+  <section class="section_result">
+    <h1>Result</h1>
+    <!-- in this div we inner the result -->
+    <div class="result">
+      <!-- we use the post object to show the result -->
+      
+      <h1 class="title">
+        {{ post.title }}
+      </h1>
+      <div class="description" [innerHTML]="post.body">
+      </div>
+      <pre>
+        <code class="hljs" contenteditable="true">{{ post.code }}</code>
+      </pre>
+    </div>
+  </section>
+  <div class="form">
+    <form #postForm="ngForm">
+      <div class="form_group">
+        <label for="title">Write title of post</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Title"
+          [(ngModel)]="post.title"
+        />
+      </div>
+      <div class="form_group">
+        <label for="Body">Write content of post</label>
+        <p class="options"> - Init phrase with # and press enter after press ControlEnter to make subtitle</p>
+        <textarea
+          id="Body"
+          name="Body"
+          placeholder="Content"
+          rows="10"
+          #body
+          [(ngModel)]="post.body"
+        ></textarea>
+      </div>
+      <div class="form_group">
+        <label for="code">Add block code here</label>
+        <button (click)="showCoding()" class="btn_show">Show</button>
+        <button (click)="saveBlockCode()" >Save</button>
+        <textarea
+          id="code"
+          name="code"
+          placeholder="Code"
+          rows="5"
+          #code
+          *ngIf="isCoding"
+          [(ngModel)]="post.code"
+        ></textarea>
+      </div>
+      <button class="btn_form" (click)="savePost()">Save Post</button>
+    </form>
+  </div>
+</div>

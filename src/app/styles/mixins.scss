@@ -1,0 +1,34 @@
+@mixin btn_basic($background, $color, $bold, $size) {
+    background-color: $background;
+    color: $color;
+    font-size: $size;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    @if $bold == true {
+        font-weight: bold;
+    }
+    @if $size == "small" {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    @if $size == "medium" {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    @if $size == "large" {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
+
+@mixin btn_full($background, $color, $bold, $size) {
+    @include btn_basic($background, $color, $bold, $size);
+    width: 100%;
+}
+
+:export {
+    btn_basic: btn_basic; 
+    btn_full: btn_full;
+}

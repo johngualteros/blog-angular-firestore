@@ -1,4 +1,17 @@
-# BlogAngular
+# BlogAngular John Gualteros
+# All rights reserved to the author of the app
+
+### hi there, this is a simple blog app that i made using angular 15.1.6 and firebase as a backend.
+### i use the firestore db to store the posts.
+
+## how use it
+
+### first you need to create a firebase project and add the firebase config to the environment.ts file
+
+run `npm install` to install all the dependencies
+and then run `ng serve` to run the app
+
+# video preview
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 

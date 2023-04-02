@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="container_post">
+    <h1 class="title">{{ lastPost.title }}</h1>
+    <p [innerHTML]="lastPost.body"></p>
+  </div>
+  <div class="container_other_posts">
+    <h3>More About My Posts</h3>
+    <app-card-posts *ngFor="let post of posts" [post]="post"></app-card-posts>
+  </div>
+</div>
