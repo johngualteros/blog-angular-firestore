@@ -13,6 +13,10 @@ and then run `ng serve` to run the app
 
 # video preview
 
+
+https://user-images.githubusercontent.com/100100458/229329838-d0623ee1-eaf1-4998-b030-a5c111c10c64.mp4
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
 ## Development server
